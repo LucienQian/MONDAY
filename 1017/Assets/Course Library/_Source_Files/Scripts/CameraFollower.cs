@@ -1,31 +1,31 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollower : MonoBehaviour
 {
-    [Header("¹CÀ¸ª«¥ó"), Tooltip("½Ğ©ñ§A­nÀHªº¹CÀ¸ª«¥ó")]
-    public GameObject player;  //©ñ¸m©w¸q°Ï¶ô
-    //³X°İ¯Å§O ÅÜ¼Æ«¬ºA ÅÜ¼Æ¦WºÙ (= ÅÜ¼Æ¼Æ­È)
+    [Header("éŠæˆ²ç‰©ä»¶"), Tooltip("è«‹æ”¾ä½ è¦éš¨çš„éŠæˆ²ç‰©ä»¶")]
+    public GameObject player;  //æ”¾ç½®å®šç¾©å€å¡Š
+    //è¨ªå•ç´šåˆ¥ è®Šæ•¸å‹æ…‹ è®Šæ•¸åç¨± (= è®Šæ•¸æ•¸å€¼)
 
-    [Header("Äá¼v¾÷°¾²¾¶q")]
+    [Header("æ”å½±æ©Ÿåç§»é‡")]
     public Vector3 offset = new Vector3 (0, 5, -3);
 
-    public float speed = 20; //«e«á²¾°ÊÅÜ¼Æ
+    public float speed = 20; //å‰å¾Œç§»å‹•è®Šæ•¸
 
-    public float trunspeed = 10; //¥ª¥k²¾°Êª««×    
+    public float trunspeed = 10; //å·¦å³ç§»å‹•ç‰©åº¦    
     
 
-    // Start ¥u°õ¦æ¤@¦¸
+    // Start åªåŸ·è¡Œä¸€æ¬¡
     void Start()
     {
         
     }
 
-    // Update ¤@ª½°õ¦æ
+    // Update ä¸€ç›´åŸ·è¡Œ
     void LateUpdate()
     {
-        //§â¦¹µ{¦¡ªº¦ì¸m°Ñ·Óplayer¹CÀ¸ª«¥óªº¦ì¸m + °¾²¾¶q
+        //æŠŠæ­¤ç¨‹å¼çš„ä½ç½®åƒç…§playeréŠæˆ²ç‰©ä»¶çš„ä½ç½® + åç§»é‡
         transform.position = player.transform.position + offset; 
     }
 }
