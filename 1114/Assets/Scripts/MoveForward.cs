@@ -1,10 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    //
+    //Global zone
     public float speed = 40;
 
     // Start is called before the first frame update
