@@ -10,9 +10,12 @@ public class SpawnManager : MonoBehaviour
     public float delayTime = 1.5f;
     public float repeatTime = 2;
 
+    public PlayerController PC_Script;
+
     void Start()
     {
         InvokeRepeating("ObstacleSpawn", delayTime, repeatTime);
+        PC_Script = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
 
@@ -22,6 +25,9 @@ public class SpawnManager : MonoBehaviour
 
     void ObstacleSpawn()
     {
-        Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        if (PC_Script.gameOver == false)
+        {
+             Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        }       
     }
 }

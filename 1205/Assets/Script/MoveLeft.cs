@@ -5,15 +5,22 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     public float speed = 30;
+
+    public PlayerController PC_Script;
     
     void Start()
     {
-        
+        PC_Script = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        if (PC_Script.gameOver == false)
+        {
+            //控制遊戲物件左右移動
+           transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+        
     }
 }
